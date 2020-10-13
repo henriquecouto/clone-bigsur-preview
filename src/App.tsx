@@ -1,11 +1,13 @@
 import React from "react";
 import GlobalStyles from "./styles/global";
 
+import Hero from "./components/Hero";
+
 function App() {
   return (
-    <div>
+    <div style={{ height: "2820vh" }}>
       <GlobalStyles />
-      <h1>Hello Clone Big Sur Preview</h1>
+      <Hero />
     </div>
   );
 }
