@@ -1,16 +1,33 @@
 import React from "react";
 
 import { Container } from "./styles";
-import { ControlCenter, Desktop, Dock, Title, Maps, Bitmap } from "./Elements";
+import {
+  ControlCenter,
+  Desktop,
+  Dock,
+  Title,
+  Maps,
+  Bitmap,
+  Safari,
+} from "./Elements";
 
 const Hero: React.FC = () => {
   return (
     <Container>
       <Desktop>
         <Dock />
-        <ControlCenter />
-        <Maps />
-        <Bitmap />
+        <div
+          style={{
+            width: 0,
+            height: 0,
+            position: "relative",
+          }}
+        >
+          <ControlCenter />
+          <Maps />
+          <Safari />
+          <Bitmap />
+        </div>
       </Desktop>
       <Title />
     </Container>
