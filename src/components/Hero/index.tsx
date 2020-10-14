@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Container } from "./styles";
-import { ControlCenter, Desktop, Dock, Title, Maps } from "./Elements";
+import { ControlCenter, Desktop, Dock, Title, Maps, Bitmap } from "./Elements";
 
 const Hero: React.FC = () => {
   return (
@@ -10,6 +10,7 @@ const Hero: React.FC = () => {
         <Dock />
         <ControlCenter />
         <Maps />
+        <Bitmap />
       </Desktop>
       <Title />
     </Container>
