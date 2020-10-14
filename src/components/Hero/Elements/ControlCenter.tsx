@@ -21,6 +21,7 @@ const ControlCenter: React.FC = () => {
   return (
     <ControlCenterImage
       src={controlCenterImg}
+      whileHover={{ scale: 1.1, rotateX: -10, rotateY: 15 }}
       style={{
         translateX: controlCenterTranslateX,
         translateY: controlCenterTranslateY,
