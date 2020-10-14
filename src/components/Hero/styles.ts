@@ -40,6 +40,11 @@ export const HardwareImage = styled(Img)`
   width: 1400px;
 `;
 
+export const DockImage = styled(Img)`
+  width: 840px;
+  bottom: 194px;
+`;
+
 export const Title = styled(motion.div)`
   z-index: 2;
   display: flex;
