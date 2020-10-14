@@ -45,7 +45,7 @@ export const DockImage = styled(Img)`
   bottom: 194px;
 `;
 
-const DesktopElement = styled(Img)`
+export const DesktopElement = styled(Img)`
   z-index: 2;
   position: absolute;
 `;
@@ -54,24 +54,6 @@ export const ControlCenterImage = styled(DesktopElement)`
   width: 200px;
   top: -260px;
   right: -445px;
-`;
-
-export const MapsImage = styled(DesktopElement)`
-  width: 500px;
-  top: -240px;
-  left: -440px;
-`;
-
-export const BitmapImage = styled(DesktopElement)`
-  width: 400px;
-  top: -60px;
-  left: -380px;
-`;
-
-export const SafariImage = styled(DesktopElement)`
-  width: 510px;
-  top: -180px;
-  left: -260px;
 `;
 
 export const TitleContainer = styled(motion.div)`

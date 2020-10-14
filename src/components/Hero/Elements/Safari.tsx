@@ -1,31 +1,16 @@
 import React from "react";
 
-import { SafariImage } from "../styles";
 import safariImg from "../../../assets/hero_safari.png";
-import { useTransform, useViewportScroll } from "framer-motion";
+import Window from "../Window";
 
 const Safari: React.FC = () => {
-  const { scrollYProgress } = useViewportScroll();
-
-  const controlCenterTranslateX = useTransform(
-    scrollYProgress,
-    [0.038, 0.048],
-    [800, 0]
-  );
-  const controlCenterTranslateY = useTransform(
-    scrollYProgress,
-    [0.038, 0.048],
-    [600, 0]
-  );
-
   return (
-    <SafariImage
-      src={safariImg}
+    <Window
+      image={safariImg}
+      positionX={{ start: 800, finish: 0 }}
+      positionY={{ start: 600, finish: 0 }}
+      style={{ width: 510, top: -180, left: -260 }}
       whileHover={{ scale: 1.1, rotateX: 5, rotateY: 15, zIndex: 10 }}
-      style={{
-        translateX: controlCenterTranslateX,
-        translateY: controlCenterTranslateY,
-      }}
     />
   );
 };
