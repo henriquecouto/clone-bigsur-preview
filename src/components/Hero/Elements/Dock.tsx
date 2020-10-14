@@ -14,6 +14,8 @@ const Dock: React.FC = () => {
     <DockImage
       src={dockImg}
       style={{ opacity: dockOpacity, scale: dockScale }}
+      whileHover={{ rotateY: 10, rotateX: -1 }}
+      whileTap={{ rotateZ: 1 }}
     />
   );
 };
