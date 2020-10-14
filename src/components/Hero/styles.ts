@@ -56,14 +56,15 @@ export const ControlCenterImage = styled(DesktopElement)`
   right: -345px;
 `;
 
-export const Title = styled(motion.div)`
+export const TitleContainer = styled(motion.div)`
+  color: white;
   z-index: 2;
   display: flex;
   flex-direction: column;
   text-align: center;
   align-items: center;
   justify-content: center;
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
