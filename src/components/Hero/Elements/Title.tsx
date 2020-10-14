@@ -19,10 +19,15 @@ const container = {
 const Title: React.FC = () => {
   const { scrollYProgress } = useViewportScroll();
   const titleOpacity = useTransform(scrollYProgress, [0, 0.02], [1, 0]);
+  const titleTranslateY = useTransform(
+    scrollYProgress,
+    [0.02, 0.03],
+    [0, -1000]
+  );
 
   return (
     <TitleContainer
-      style={{ opacity: titleOpacity }}
+      style={{ opacity: titleOpacity, translateY: titleTranslateY }}
       variants={container}
       initial="hidden"
       animate="visible"
