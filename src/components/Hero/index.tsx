@@ -11,7 +11,7 @@ const Hero: React.FC = () => {
   const desktopTranslateY = useTransform(
     scrollYProgress,
     [0.05, 0.1],
-    [0, -750]
+    [0, -1000]
   );
 
   return (
