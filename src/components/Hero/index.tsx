@@ -8,10 +8,12 @@ import {
   DesktopImage,
   HardwareImage,
   DockImage,
+  ControlCenterImage,
 } from "./styles";
 import desktopImg from "../../assets/hero_desktop.jpg";
 import hardwareImg from "../../assets/hero_hardware.png";
 import dockImg from "../../assets/hero_dock.png";
+import controlCenterImg from "../../assets/hero_control_center.png";
 
 const Hero: React.FC = () => {
   const { scrollYProgress } = useViewportScroll();
@@ -27,6 +29,17 @@ const Hero: React.FC = () => {
   const dockOpacity = useTransform(scrollYProgress, [0.047, 0.05], [0, 1]);
   const dockScale = useTransform(scrollYProgress, [0.047, 0.05], [1.2, 1]);
 
+  const controlCenterTranslateX = useTransform(
+    scrollYProgress,
+    [0.038, 0.048],
+    [400, 0]
+  );
+  const controlCenterTranslateY = useTransform(
+    scrollYProgress,
+    [0.038, 0.048],
+    [-400, 0]
+  );
+
   return (
     <Container>
       <DesktopContainer
@@ -37,6 +50,13 @@ const Hero: React.FC = () => {
         <DockImage
           src={dockImg}
           style={{ opacity: dockOpacity, scale: dockScale }}
+        />
+        <ControlCenterImage
+          src={controlCenterImg}
+          style={{
+            translateX: controlCenterTranslateX,
+            translateY: controlCenterTranslateY,
+          }}
         />
       </DesktopContainer>
       <Title style={{ opacity: titleOpacity }}>

@@ -45,6 +45,17 @@ export const DockImage = styled(Img)`
   bottom: 194px;
 `;
 
+const DesktopElement = styled(Img)`
+  z-index: 2;
+  position: relative;
+`;
+
+export const ControlCenterImage = styled(DesktopElement)`
+  width: 200px;
+  top: -135px;
+  right: -345px;
+`;
+
 export const Title = styled(motion.div)`
   z-index: 2;
   display: flex;
