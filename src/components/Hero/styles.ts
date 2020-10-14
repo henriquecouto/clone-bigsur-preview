@@ -53,7 +53,13 @@ const DesktopElement = styled(Img)`
 export const ControlCenterImage = styled(DesktopElement)`
   width: 200px;
   top: -135px;
-  right: -345px;
+  right: -595px;
+`;
+
+export const MapsImage = styled(DesktopElement)`
+  width: 500px;
+  top: -85px;
+  left: -290px;
 `;
 
 export const TitleContainer = styled(motion.div)`
