@@ -9,9 +9,9 @@ export const Container = styled.div`
   overflow: hidden;
 `;
 
-export const Desktop = styled(motion.img)`
+export const DesktopContainer = styled(motion.div)`
   z-index: 1;
-  width: 100vw;
+  width: 100%;
   object-fit: contain;
   position: fixed;
   top: 0;
@@ -19,6 +19,25 @@ export const Desktop = styled(motion.img)`
   left: 0;
   right: 0;
   margin: auto;
+  padding: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+const Img = styled(motion.img)`
+  object-fit: "contain";
+  position: absolute;
+  bottom: -135px;
+`;
+
+export const DesktopImage = styled(Img)`
+  width: 900px;
+  bottom: 190px;
+`;
+
+export const HardwareImage = styled(Img)`
+  width: 1400px;
 `;
 
 export const Title = styled(motion.div)`
