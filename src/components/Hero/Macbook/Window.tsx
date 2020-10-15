@@ -1,11 +1,6 @@
 import React from "react";
 
-import {
-  MotionStyle,
-  TargetAndTransition,
-  useTransform,
-  useViewportScroll,
-} from "framer-motion";
+import { MotionStyle, useTransform, useViewportScroll } from "framer-motion";
 import { DesktopElement } from "./styles";
 
 type Position = { start: number; finish: number };
@@ -15,7 +10,7 @@ type Props = {
   positionX: Position;
   positionY: Position;
   image: string;
-  whileHover: TargetAndTransition;
+  desktopRef: React.RefObject<Element>;
 };
 
 const Window: React.FC<Props> = ({
@@ -23,7 +18,7 @@ const Window: React.FC<Props> = ({
   positionX,
   positionY,
   image,
-  whileHover = {},
+  desktopRef,
 }) => {
   const { scrollYProgress } = useViewportScroll();
 
@@ -40,11 +35,15 @@ const Window: React.FC<Props> = ({
 
   return (
     <DesktopElement
+      drag
+      dragConstraints={desktopRef}
+      dragMomentum={false}
+      whileTap={{ zIndex: 10 }}
       src={image}
-      whileHover={whileHover}
       style={{
         translateX: TranslateX,
         translateY: TranslateY,
+        cursor: "grab",
         ...style,
       }}
     />

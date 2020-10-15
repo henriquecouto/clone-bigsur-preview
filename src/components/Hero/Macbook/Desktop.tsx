@@ -5,7 +5,11 @@ import { DesktopContainer, DesktopImage, HardwareImage } from "./styles";
 import desktopImg from "../../../assets/hero_desktop.jpg";
 import hardwareImg from "../../../assets/hero_hardware.png";
 
-const Desktop: React.FC = ({ children }) => {
+type Props = {
+  refObject: React.MutableRefObject<any>;
+};
+
+const Desktop: React.FC<Props> = ({ children, refObject }) => {
   const { scrollYProgress } = useViewportScroll();
   const desktopScale = useTransform(scrollYProgress, [0, 0.05], [2.5, 1]);
   const desktopTranslateY = useTransform(
@@ -18,7 +22,7 @@ const Desktop: React.FC = ({ children }) => {
       style={{ scale: desktopScale, translateY: desktopTranslateY }}
     >
       <HardwareImage src={hardwareImg} />
-      <DesktopImage src={desktopImg} />
+      <DesktopImage src={desktopImg} ref={refObject} />
       {children}
     </DesktopContainer>
   );

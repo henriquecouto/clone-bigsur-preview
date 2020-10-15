@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import Desktop from "./Desktop";
 import Dock from "./Dock";
 import ControlCenter from "./ControlCenter";
@@ -8,9 +8,11 @@ import Bitmap from "./Bitmap";
 import Safari from "./Safari";
 
 const Macbook: React.FC = () => {
+  const desktopRef = useRef();
+
   return (
     <>
-      <Desktop>
+      <Desktop refObject={desktopRef}>
         <Dock />
         <div
           style={{
@@ -20,9 +22,9 @@ const Macbook: React.FC = () => {
           }}
         >
           <ControlCenter />
-          <Maps />
-          <Safari />
-          <Bitmap />
+          <Maps desktopRef={desktopRef} />
+          <Safari desktopRef={desktopRef} />
+          <Bitmap desktopRef={desktopRef} />
         </div>
       </Desktop>
       <Title />
