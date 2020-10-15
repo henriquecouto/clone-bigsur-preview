@@ -26,10 +26,9 @@ export const Image = styled.div<ImageProps>`
 
 export const Content = styled(motion.div)`
   z-index: 1;
-  width: 58%;
-  height: 57%;
-  background: #0066aa;
-  position: relative;
+  width: 100%;
+  height: calc(90vw - 90vw * 0.67);
+  position: absolute;
   border-radius: 5px;
   cursor: pointer;
 `;

@@ -9,30 +9,73 @@ let translateY;
 let translateX;
 
 const scaleOptions = { 0.08: 1, 1: 0.08 } as any;
-const translateOptions = {
-  0.08: { x: 260, y: 280 },
-  1: { x: 0, y: 0 },
-} as any;
 
-const Filler: React.FC = () => {
+type WindowProps = {
+  translateOptions: {
+    initial: { x: number; y: number };
+    final: { x: number; y: number };
+  };
+  background: string;
+};
+
+type scaleTypes = "initial" | "final";
+
+const getScaleType = (scaleValue: number): scaleTypes => {
+  const scaleTypes = { "0.08": "initial", "1": "final" } as any;
+  return scaleTypes[scaleValue];
+};
+
+const Window: React.FC<WindowProps> = ({ translateOptions, background }) => {
   const control = useAnimation();
 
   const increaseScale = () => {
     scale = scaleOptions[scale];
-    translateY = translateOptions[scale].y;
-    translateX = translateOptions[scale].x;
+    translateY = translateOptions[getScaleType(scale)].y;
+    translateX = translateOptions[getScaleType(scale)].x;
     control.start({ scale, translateY, translateX });
   };
+  return (
+    <Content
+      onClick={increaseScale}
+      animate={control}
+      transition={{ ease: "easeIn" }}
+      style={{
+        scale: 0.08,
+        translateY: translateOptions.initial.y,
+        translateX: translateOptions.initial.x,
+        background,
+      }}
+    />
+  );
+};
 
+const Filler: React.FC = () => {
   return (
     <Container>
       <Image imageUrl={hardwareImg}>
-        <Content
-          onClick={increaseScale}
-          animate={control}
-          transition={{ ease: "easeIn" }}
-          style={{ scale: 0.08, translateY: 280, translateX: 260 }}
-        />
+        <div style={{ width: "58%", height: 0, position: "relative" }}>
+          <Window
+            translateOptions={{
+              initial: { x: 260, y: 250 },
+              final: { x: 0, y: 0 },
+            }}
+            background="#0066aa"
+          />
+          <Window
+            translateOptions={{
+              initial: { x: 180, y: 250 },
+              final: { x: 0, y: 0 },
+            }}
+            background="#00aa66"
+          />
+          <Window
+            translateOptions={{
+              initial: { x: 100, y: 250 },
+              final: { x: 0, y: 0 },
+            }}
+            background="#00aaaa"
+          />
+        </div>
       </Image>
     </Container>
   );
