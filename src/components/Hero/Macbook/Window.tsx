@@ -6,7 +6,7 @@ import {
   useTransform,
   useViewportScroll,
 } from "framer-motion";
-import { DesktopElement } from "../styles";
+import { DesktopElement } from "./styles";
 
 type Position = { start: number; finish: number };
 

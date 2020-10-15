@@ -1,7 +1,7 @@
 import React from "react";
 import { useTransform, useViewportScroll } from "framer-motion";
 
-import { ControlCenterImage } from "../styles";
+import { ControlCenterImage } from "./styles";
 import controlCenterImg from "../../../assets/hero_control_center.png";
 
 const ControlCenter: React.FC = () => {

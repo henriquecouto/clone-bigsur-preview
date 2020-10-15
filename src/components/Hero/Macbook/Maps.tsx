@@ -1,7 +1,7 @@
 import React from "react";
 
 import mapsImg from "../../../assets/hero_map.png";
-import Window from "../Window";
+import Window from "./Window";
 
 const Maps: React.FC = () => {
   return (

@@ -1,7 +1,7 @@
 import React from "react";
 
 import safariImg from "../../../assets/hero_safari.png";
-import Window from "../Window";
+import Window from "./Window";
 
 const Safari: React.FC = () => {
   return (

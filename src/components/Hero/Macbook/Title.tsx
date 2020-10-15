@@ -1,7 +1,7 @@
 import { useTransform, useViewportScroll } from "framer-motion";
 import React from "react";
 
-import { TitleContainer } from "../styles";
+import { TitleContainer } from "./styles";
 
 const container = {
   hidden: { opacity: 0, scale: 3 },

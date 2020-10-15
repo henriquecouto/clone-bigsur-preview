@@ -1,7 +1,7 @@
 import React from "react";
 
 import bitmapImg from "../../../assets/hero_bitmap.png";
-import Window from "../Window";
+import Window from "./Window";
 
 const Bitmap: React.FC = () => {
   return (

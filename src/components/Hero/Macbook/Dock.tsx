@@ -1,7 +1,7 @@
 import React from "react";
 import { useTransform, useViewportScroll } from "framer-motion";
 
-import { DockImage } from "../styles";
+import { DockImage } from "./styles";
 import dockImg from "../../../assets/hero_dock.png";
 
 const Dock: React.FC = () => {

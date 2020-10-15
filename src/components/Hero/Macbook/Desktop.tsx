@@ -1,7 +1,7 @@
 import React from "react";
 import { useTransform, useViewportScroll } from "framer-motion";
 
-import { DesktopContainer, DesktopImage, HardwareImage } from "../styles";
+import { DesktopContainer, DesktopImage, HardwareImage } from "./styles";
 import desktopImg from "../../../assets/hero_desktop.jpg";
 import hardwareImg from "../../../assets/hero_hardware.png";
 
