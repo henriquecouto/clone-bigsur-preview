@@ -1,14 +1,10 @@
-import { useAnimation, useViewportScroll } from "framer-motion";
+import { useAnimation } from "framer-motion";
 import React from "react";
 import { Body, Container, Pointer, Hour, Min, Sec } from "./styles";
 
 const deg = 6;
 
 const Clock: React.FC = () => {
-  const { scrollYProgress } = useViewportScroll();
-
-  console.log({ scrollYProgress });
-
   const hourControl = useAnimation();
   const minuteControl = useAnimation();
   const secondControl = useAnimation();
