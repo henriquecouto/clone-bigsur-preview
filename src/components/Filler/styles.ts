@@ -6,6 +6,7 @@ export const Container = styled.article`
   justify-content: center;
   padding: 100px 10px;
   position: relative;
+  height: 740px;
 `;
 
 type ImageProps = {

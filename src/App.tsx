@@ -3,6 +3,7 @@ import GlobalStyles from "./styles/global";
 
 import Hero from "./components/Hero";
 import Filler from "./components/Filler";
+import Clock from "./components/Clock";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <GlobalStyles />
       <Hero />
       <Filler />
+      <Clock />
     </div>
   );
 }
