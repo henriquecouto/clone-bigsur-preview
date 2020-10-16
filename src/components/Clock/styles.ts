@@ -3,15 +3,19 @@ import styled from "styled-components";
 import clock from "../../assets/clock.svg";
 
 export const Container = styled.div`
+  margin-top: 200px;
   display: flex;
   background-color: #0066cc;
   overflow: hidden;
   padding: 50px;
   justify-content: center;
+  height: 400px;
 `;
 
-export const Body = styled.div`
+export const Body = styled(motion.div)`
+  position: absolute;
   background: url(${clock});
+  background-color: #0066cc;
   background-size: contain;
   width: 300px;
   height: 300px;
