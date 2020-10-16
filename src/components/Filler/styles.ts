@@ -15,8 +15,8 @@ type ImageProps = {
 export const Image = styled.div<ImageProps>`
   position: absolute;
   margin: auto;
-  width: 90vw;
-  height: calc(90vw - 90vw * 0.4);
+  width: 1200px;
+  height: 700px;
   background: url(${(props) => props.imageUrl}) center;
   background-size: contain;
   display: flex;
@@ -27,7 +27,7 @@ export const Image = styled.div<ImageProps>`
 export const Content = styled(motion.div)`
   z-index: 1;
   width: 100%;
-  height: calc(90vw - 90vw * 0.67);
+  height: 380px;
   position: absolute;
   border-radius: 5px;
   cursor: pointer;

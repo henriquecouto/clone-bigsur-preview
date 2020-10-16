@@ -53,24 +53,32 @@ const Filler: React.FC = () => {
   return (
     <Container>
       <Image imageUrl={hardwareImg}>
-        <div style={{ width: "58%", height: 0, position: "relative" }}>
+        <div
+          style={{
+            width: "56%",
+            height: 0,
+            position: "absolute",
+            top: 25,
+            margin: "auto",
+          }}
+        >
           <Window
             translateOptions={{
-              initial: { x: 260, y: 250 },
+              initial: { x: 260, y: 220 },
               final: { x: 0, y: 0 },
             }}
             background="#0066aa"
           />
           <Window
             translateOptions={{
-              initial: { x: 180, y: 250 },
+              initial: { x: 180, y: 220 },
               final: { x: 0, y: 0 },
             }}
             background="#00aa66"
           />
           <Window
             translateOptions={{
-              initial: { x: 100, y: 250 },
+              initial: { x: 100, y: 220 },
               final: { x: 0, y: 0 },
             }}
             background="#00aaaa"
