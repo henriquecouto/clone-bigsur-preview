@@ -61,7 +61,6 @@ export const UL = styled(motion.ul)`
 
 export const LI = styled(motion.li)`
   position: relative;
-  cursor: pointer;
   margin: 7px 0;
   user-select: none;
   font-weight: 600;

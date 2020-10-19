@@ -15,7 +15,7 @@ const Topic: React.FC<{
   name: string;
   subtopics?: Array<{ name: string; content: string }>;
   content?: string;
-}> = ({ name, subtopics }) => {
+}> = ({ name, subtopics, content }) => {
   const controlTopic = useAnimation();
   let openTopic = true;
 
@@ -25,29 +25,30 @@ const Topic: React.FC<{
   };
 
   return (
-    <LI
-      key={name}
-      variants={topicVariants}
-      animate={controlTopic}
-      onClick={handleOpenTopic}
-      initial={openTopic ? "opened" : "closed"}
-    >
-      {name}
-      {subtopics && (
-        <NL>
-          <UL>
-            {subtopics.map((subtopic, i) => {
-              return (
-                <LI key={subtopic.name + i}>
-                  {subtopic.name}
-                  <p style={{ fontWeight: 500 }}>{subtopic.content}</p>
-                </LI>
-              );
-            })}
-          </UL>
-        </NL>
-      )}
-    </LI>
+    <>
+      <LI
+        key={name}
+        variants={topicVariants}
+        animate={controlTopic}
+        initial={openTopic ? "opened" : "closed"}
+      >
+        <div onClick={handleOpenTopic}>{name}</div>
+        {subtopics && (
+          <NL>
+            <UL>
+              {subtopics.map((subtopic, i) => (
+                <Topic
+                  key={subtopic.name + i}
+                  name={subtopic.name}
+                  content={subtopic.content}
+                />
+              ))}
+            </UL>
+          </NL>
+        )}
+        {!!content && <p style={{ fontWeight: 500 }}>{content}</p>}
+      </LI>
+    </>
   );
 };
 export default Topic;
