@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
@@ -15,6 +16,7 @@ export const Wrapper = styled.div`
 `;
 
 export const Content = styled.div`
+  position: relative;
   padding: 0 10px;
   max-width: 960px;
   width: 100%;
@@ -39,4 +41,15 @@ export const Title = styled.p`
 export const Button = styled(Menu)`
   cursor: pointer;
   user-select: none;
+`;
+
+export const FeaturesContainer = styled(motion.div)`
+  width: 500px;
+  height: 70vh;
+  position: absolute;
+  top: 75px;
+  right: 0;
+  background-color: #efefefee;
+  border-radius: 10px;
+  box-shadow: #21212166 1px 1px 15px 0;
 `;
