@@ -1,0 +1,30 @@
+{
+  "topics": [
+    {
+      "name": "Experience",
+      "subtopics": [
+        {
+          "name": "Updated menu bar",
+          "content": "The menu bar is now taller and more translucent, allowing your desktop picture to extend from edge to edge. Words lighten or darken based on the color of your desktop picture. And pull-down menus are larger, with more space between the lines to make everything easier to read."
+        },
+        {
+          "name": "Floating Dock",
+          "content": "The menu bar is now taller and more translucent, allowing your desktop picture to extend from edge to edge. Words lighten or darken based on the color of your desktop picture. And pull-down menus are larger, with more space between the lines to make everything easier to read."
+        }
+      ]
+    },
+    {
+      "name": "Control Center",
+      "subtopics": [
+        {
+          "name": "Updated menu bar 2",
+          "content": "The menu bar is now taller and more translucent, allowing your desktop picture to extend from edge to edge. Words lighten or darken based on the color of your desktop picture. And pull-down menus are larger, with more space between the lines to make everything easier to read."
+        },
+        {
+          "name": "Floating Dock 2",
+          "content": "The menu bar is now taller and more translucent, allowing your desktop picture to extend from edge to edge. Words lighten or darken based on the color of your desktop picture. And pull-down menus are larger, with more space between the lines to make everything easier to read."
+        }
+      ]
+    }
+  ]
+}

@@ -7,42 +7,52 @@ import {
   Title,
   Button,
   FeaturesContainer,
+  UL,
 } from "./styles";
 
-let openFeatures = false;
+import featuresList from "./features.json";
+import Topic from "./Topic";
 
 const featuresVariants = {
   opened: {
     scale: 1,
     translateY: 0,
     translateX: 0,
-    borderRadius: "10px",
-    height: "70vh",
   },
   closed: {
     scale: 0,
-    translateY: -100,
-    translateX: 200,
-    borderRadius: "5000px",
-    height: 0,
+    translateY: -400,
+    translateX: 240,
   },
 };
 
 const Features: React.FC = () => {
+  let openFeatures = false;
   const control = useAnimation();
 
   const handleOpenFeatures = () => {
     openFeatures = !openFeatures;
     control.start(openFeatures ? "opened" : "closed");
   };
+
   return (
     <>
       <FeaturesContainer
         animate={control}
         transition={{ ease: "backInOut", duration: 1 }}
         variants={featuresVariants}
-        initial="closed"
-      ></FeaturesContainer>
+        initial={openFeatures ? "opened" : "closed"}
+      >
+        <UL>
+          {featuresList.topics.map((feature, i) => (
+            <Topic
+              name={feature.name}
+              subtopics={feature.subtopics}
+              key={feature.name + i}
+            />
+          ))}
+        </UL>
+      </FeaturesContainer>
       <Button onClick={handleOpenFeatures}>All New Features</Button>
     </>
   );
